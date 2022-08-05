@@ -3,13 +3,13 @@ const Filme = require('../models/Filmes')
 
 router.post('/insert', async (req, res) => {
 
-    const {name, description, genre, produce, releaseYear, value} = req.body
+    const {nome, descricao, genero, produtora, anolancamento, preco} = req.body
 
-    if(!name){
+    if(!nome){
         res.status(422).json({message: 'Por favor preencha o nome do filme'});
         return;
     }
-    if(!value){
+    if(!preco){
         res.status(422).json({message: 'Por favor preencha o preço do filme'});
         return;
     }
