@@ -15,12 +15,12 @@ router.post('/insert', async (req, res) => {
     }
 
     const filme = {
-        name,
-        description,
-        genre,
-        produce,
-        releaseYear,
-        value
+        nome,
+        descricao,
+        genero,
+        produtora,
+        anolancamento,
+        preco
     }
 
     try {
@@ -74,15 +74,15 @@ router.get('/find-id-filme/:id', async (req, res) => {
 router.patch('/update/:id', async (req, res) => {
 
     const idFilme = req.params.id;
-    const {name, description, genre, produce, releaseYear, value} = req.body
+    const { nome, descricao, genero, produtora, anolancamento, preco } = req.body
 
     const filme = {
-        name,
-        description,
-        genre,
-        produce,
-        releaseYear,
-        value
+        nome,
+        descricao,
+        genero,
+        produtora,
+        anolancamento,
+        preco
     }
    
 
