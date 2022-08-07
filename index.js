@@ -1,6 +1,7 @@
 //express
 const express = require("express");
-const app = express()
+const app = express();
+const cors = require("cors");
 //mongo - database
 const mongoose = require("mongoose")
 
@@ -8,6 +9,9 @@ const PORT = process.env.PORT || 9090;
 //dados database
 const DB_USER = 'Jones_S_Brito';
 const DB_PASS = encodeURIComponent('Mobral123');
+app.use(
+    cors(),
+)
 
 app.use(
     express.urlencoded({
